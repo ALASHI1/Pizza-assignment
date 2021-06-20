@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pizza Order</title>
+</head>
+<body>
+<h2>You have successfully placed your order of a {{pizza.size|capfirst}} {{pizza.types|capfirst}} pizza with these toppings
+ {% for i in pizza.toppings %}<ul><li>{{i|capfirst}}</li></ul>{% endfor%}
+</h2>
+
+<a href="{% url 'Edit' id=pizza.id %}"> click here to change your order</a>
+
+</body>
+</html>
